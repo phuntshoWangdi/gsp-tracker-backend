@@ -1,5 +1,5 @@
-[submodule "traccar-web"]
-	path = traccar-web
-	url = ../traccar-web.git
+[submodule "fasttrack-web"]
+	path = fasttrack-web
+	url = ../fasttrack-web.git
 	branch = master
 	ignore = all

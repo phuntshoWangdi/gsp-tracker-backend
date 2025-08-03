@@ -1,4 +1,4 @@
-package org.traccar.helper;
+package com.fasttrack.helper;
 
 import org.junit.jupiter.api.Test;
 

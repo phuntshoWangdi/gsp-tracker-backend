@@ -63,7 +63,7 @@ public class PortConfigSuffix extends ConfigSuffix<Integer> {
         PORTS.put("intellitrac", 5037);
         PORTS.put("gpsmta", 5038);
         PORTS.put("wialon", 5039);
-        PORTS.put("carscop", 5040);
+//        PORTS.put("carscop", 5040);
         PORTS.put("apel", 5041);
         PORTS.put("manpower", 5042);
         PORTS.put("globalsat", 5043);

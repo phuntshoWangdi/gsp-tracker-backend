@@ -1,12 +1,12 @@
 [Unit]
-Description=traccar
+Description=fasttrack
 After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/traccar
-ExecStart=/opt/traccar/jre/bin/java -jar tracker-server.jar conf/traccar.xml
-SyslogIdentifier=traccar
+WorkingDirectory=/opt/fasttrack
+ExecStart=/opt/fasttrack/jre/bin/java -jar tracker-server.jar conf/fasttrack.xml
+SyslogIdentifier=fasttrack
 SuccessExitStatus=143
 WatchdogSec=600
 Restart=on-failure

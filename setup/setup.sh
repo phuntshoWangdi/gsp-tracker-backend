@@ -1,26 +1,26 @@
 #!/bin/sh
 
 PRESERVECONFIG=0
-if [ -f /opt/traccar/conf/traccar.xml ]
+if [ -f /opt/fasttrack/conf/fasttrack.xml ]
 then
-    cp /opt/traccar/conf/traccar.xml /opt/traccar/conf/traccar.xml.saved
+    cp /opt/fasttrack/conf/fasttrack.xml /opt/fasttrack/conf/fasttrack.xml.saved
     PRESERVECONFIG=1
 fi
 
-mkdir -p /opt/traccar
-cp -r * /opt/traccar
-chmod -R go+rX /opt/traccar
+mkdir -p /opt/fasttrack
+cp -r * /opt/fasttrack
+chmod -R go+rX /opt/fasttrack
 
-if [ ${PRESERVECONFIG} -eq 1 ] && [ -f /opt/traccar/conf/traccar.xml.saved ]
+if [ ${PRESERVECONFIG} -eq 1 ] && [ -f /opt/fasttrack/conf/fasttrack.xml.saved ]
 then
-    mv -f /opt/traccar/conf/traccar.xml.saved /opt/traccar/conf/traccar.xml
+    mv -f /opt/fasttrack/conf/fasttrack.xml.saved /opt/fasttrack/conf/fasttrack.xml
 fi
 
-mv /opt/traccar/traccar.service /etc/systemd/system
-chmod 664 /etc/systemd/system/traccar.service
+mv /opt/fasttrack/fasttrack.service /etc/systemd/system
+chmod 664 /etc/systemd/system/fasttrack.service
 
 systemctl daemon-reload
-systemctl enable traccar.service
+systemctl enable fasttrack.service
 
-rm /opt/traccar/setup.sh
+rm /opt/fasttrack/setup.sh
 rm -r ../out
